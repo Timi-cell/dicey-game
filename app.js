@@ -21,7 +21,6 @@ Changing the game to follow these rules
 */
 
 let scores, roundScore, activePlayer, gamePlaying;
-
 init();
 
 // When a User clicks on the ROLL DICE button 👇

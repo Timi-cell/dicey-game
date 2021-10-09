@@ -1,4 +1,5 @@
-# dicey-game
+# Dicey
+
 A dice game for laptops, desktops and large screen devices
 
 GAME RULES:
@@ -10,3 +11,7 @@ GAME RULES:
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn.
 - The first player to reach the specified final score in the input field wins the game.
 - ALSO, if the final score is not specified , the first player to reach 100 points wins the game.
+
+![Design Of Dicey](./images/design-preview.jpg)
+![Welcome!!! ❤](./images/img2.jpg);
+![](./images/img3.jpg)
