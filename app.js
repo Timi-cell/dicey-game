@@ -21,15 +21,16 @@ Changing the game to follow these rules
 */
 
 let scores, roundScore, activePlayer, gamePlaying;
-init();
 
+//init();
+front();
 // When a User clicks on the ROLL DICE button 👇
 document.querySelector(".btn-roll").addEventListener("click", () => {
   if (gamePlaying) {
     // 1. Create Random Numbers
     let dice1 = Math.floor(Math.random() * 6) + 1;
     let dice2 = Math.floor(Math.random() * 6) + 1;
-    console.log(dice1, dice2);
+
     // 2. Display the result
     let diceDOM = document.querySelectorAll(".dice");
     for (let i = 0; i < diceDOM.length; i++) {
@@ -120,6 +121,8 @@ function init() {
   roundScore = 0;
   activePlayer = 0;
   gamePlaying = true;
+  let user1 = prompt("Name Of Player 1");
+  let user2 = prompt("Name Of Player 2");
   //document.querySelector(".dice").style.display = "none";
   const dices = document.querySelectorAll(".dice");
   for (let dice of dices) dice.style.display = "none";
@@ -127,11 +130,47 @@ function init() {
   document.getElementById("score-1").textContent = "0";
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
-  document.getElementById("name-0").textContent = "Player 1";
-  document.getElementById("name-1").textContent = "Player 2";
+  if (user1 !== "" && user1 !== null && user2 !== "" && user2 !== null) {
+    document.getElementById("name-0").textContent = user1;
+    document.getElementById("name-1").textContent = user2;
+  } else {
+    document.getElementById("name-0").textContent = "Player 1";
+    document.getElementById("name-1").textContent = "Player 2";
+  }
+  document.querySelector(".btn-new").textContent = "New Game";
+
   document.querySelector(".player-0-panel").classList.remove("winner");
   document.querySelector(".player-1-panel").classList.remove("winner");
   document.querySelector(".player-0-panel").classList.remove("active");
   document.querySelector(".player-1-panel").classList.remove("active");
   document.querySelector(".player-0-panel").classList.add("active");
+  document.querySelector(".btn-roll").style.display = "block";
+  document.querySelector(".btn-hold").style.display = "block";
+  document.querySelector(".input").style.display = "block";
+  document.querySelector(".input").value = "";
+}
+
+// When the HELP button is clicked
+document.querySelector(".btn-help").addEventListener("click", () => {
+  document.querySelector(".modal").style.display = "block";
+});
+
+// When the CLOSE button is clicked
+
+document.querySelector(".close").addEventListener("click", () => {
+  document.querySelector(".modal").style.display = "none";
+});
+
+function front() {
+  const dices = document.querySelectorAll(".dice");
+  for (let dice of dices) dice.style.display = "none";
+  document.getElementById("score-0").textContent = "0";
+  document.getElementById("score-1").textContent = "0";
+  document.getElementById("current-0").textContent = "0";
+  document.getElementById("current-1").textContent = "0";
+  document.querySelector(".player-0-panel").classList.remove("active");
+  document.querySelector(".player-1-panel").classList.remove("active");
+  document.querySelector(".btn-roll").style.display = "none";
+  document.querySelector(".btn-hold").style.display = "none";
+  document.querySelector(".input").style.display = "none";
 }

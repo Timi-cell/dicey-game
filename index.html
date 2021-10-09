@@ -50,17 +50,55 @@
       </div>
 
       <button class="btn-new">
-        <i class="ion-ios-plus-outline"></i>New game
+        <i class="ion-ios-plus-outline"></i>start game
       </button>
       <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
       <button class="btn-hold">
         <i class="ion-ios-download-outline"></i>Hold
       </button>
-      <input type="text" placeholder="FINAL SCORE" class="input" />
+      <button class="btn-help">
+        <i class="ion-ios-help-outline"></i> help
+      </button>
+      <input type="text" placeholder="Set Final Score" class="input" />
       <img src="/images/dice-5.png" alt="Dice" class="dice" id="dice-1" />
       <img src="/images/dice-4.png" alt="Dice" class="dice" id="dice-2" />
     </div>
-
+    <!-- RULES -->
+    <div class="modal">
+      <div class="modal-content animate">
+        <span class="close">&times;</span>
+        <h3 class="heading">GAME RULES:</h3>
+        <ol>
+          <li>The game involves 2 players, playing in rounds.</li>
+          <li>
+            In each round, a player rolls two dice as many times as he wishes.
+            Each result get added to his CURRENT score.
+          </li>
+          <li>
+            BUT, if the player rolls a 1, all his CURRENT score gets lost. After
+            that, it's the next player's turn.
+          </li>
+          <li>
+            ALSO, if the player rolls two 6 in a row, his entire score gets
+            lost. After that, it's the next player's turn.
+          </li>
+          <li>
+            The player can choose to 'Hold', which means that his CURRENT score
+            gets added to his GLOBAL score. After that, it's the next player's
+            turn.
+          </li>
+          <li>
+            The first player to reach the specified final score in the input
+            field wins the game.
+          </li>
+          <li>
+            ALSO, if the final score is not specified , the first player to
+            reach 100 points wins the game.
+          </li>
+        </ol>
+        <strong><em>ENJOY!</em></strong>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

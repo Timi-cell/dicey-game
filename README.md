@@ -13,5 +13,6 @@ GAME RULES:
 - ALSO, if the final score is not specified , the first player to reach 100 points wins the game.
 
 ![Design Of Dicey](./images/design-preview.jpg)
-![Welcome!!! ❤](./images/img2.jpg);
+Welcome!!! ❤
+![](./images/img2.jpg);
 ![](./images/img3.jpg)
