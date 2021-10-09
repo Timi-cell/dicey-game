@@ -78,7 +78,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     if (inputValue) {
       winningScore = inputValue;
     } else {
-      winningScore = 20;
+      winningScore = 100;
     }
     if (scores[activePlayer] >= winningScore) {
       document.querySelector(`#name-${activePlayer}`).textContent = "Winner!";
